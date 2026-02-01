@@ -1,154 +1,123 @@
-📰 Breaking News App
+# Breaking News App
 
-A Flutter news application that delivers the latest headlines with a clean UI, theme customization, authentication, and daily push notifications.
-This app was built to showcase Flutter architecture, state management, and Firebase integration.
+A Flutter application that delivers the latest breaking news using a clean UI and scalable architecture.  
+This project was built to showcase real-world Flutter development skills including state management, API integration, dependency injection, and Firebase services.
 
-🚀 Features
+---
 
-🔐 Authentication
+## Table of Contents
 
-User sign in / sign up
+- [Features](#features)
+  - [Authentication](#authentication)
+  - [Latest News](#latest-news)
+  - [Light & Dark Theme](#light--dark-theme)
+  - [Daily Push Notifications](#daily-push-notifications)
+  - [Saved News](#saved-news)
+  - [Clean Architecture](#clean-architecture)
+  - [GetIt](#getit)
+- [Tech Stack](#tech-stack)
+- [News API](#news-api)
+- [Screenshots](#screenshots)
+- [Live App Demo](#live-app-demo)
+- [Project Purpose](#project-purpose)
+- [License](#license)
+- [Author](#author)
 
-User profile with default avatar
+---
 
-📰 Latest News
+## Features
 
-Real-time news fetched from NewsData.io API
+### Authentication
 
-Clean and readable news cards
+- User sign in / sign up  
+- User profile with default avatar  
 
-🌙 Light & Dark Theme
+### Latest News
 
-Theme switching using Provider
+- Real-time news fetched from [NewsData API](https://newsdata.io/)  
+- Clean and readable news cards  
 
-🔔 Daily Push Notifications
+### Light & Dark Theme
 
-Sends daily news notifications using Firebase Cloud Messaging
+- Theme switching using Provider  
 
-💾 Saved News
+### Daily Push Notifications
 
-Bookmark articles for later reading
+- Sends daily news notifications using Firebase Cloud Messaging  
 
-🧠 Clean Architecture
+### Saved News
 
-Separation of UI, state, and data layers
+- Bookmark articles for later reading  
 
-🧩 Tech Stack
+### Clean Architecture
 
-Flutter
+- Separation of UI, state, and data layers  
 
-Provider – State management
+### GetIt
 
-Firebase Authentication
+- Dependency management using `get_it`  
 
-Cloud Firestore
+---
 
-Firebase Cloud Messaging (FCM)
+## Tech Stack
 
-REST API
+- Flutter
+- Provider (state management)
+- Dio (API requests)
+- get_it (dependency injection)
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Cloud Messaging
+- url_launcher
 
-NewsData.io API
+---
 
-📦 State Management
+## News API
 
-The app uses Provider for managing application state in a scalable and readable way.
+News content is provided by:
 
-Providers used in this project:
+https://newsdata.io/
 
-Theme Provider
+The API returns real-time news data in JSON format, which is consumed and displayed inside the app.
 
-Handles light & dark mode switching
+---
 
-Auth Provider
+## Screenshots
 
-Manages authentication state and user data
+![App screens](https://drive.google.com/file/d/1FGulirdledA-iwLLQ6SoUEzKKMEbsw-w/view?usp=drive_link)
 
-News Provider
+---
 
-Handles fetching, caching, and updating news data from the API
+## Live App Demo
 
-This approach keeps the UI clean and reactive while separating business logic from presentation.
+You can try the app directly in your browser using Appetize:
 
-🔔 Push Notifications
+https://appetize.io/embed/b_7eskk4fncogded3o4hdujl46ba
 
-Daily notifications are sent using Firebase Cloud Messaging (FCM).
+This allows reviewers to interact with the app without installing it locally.
 
-Users receive daily breaking news notifications
+---
 
-Push notifications are integrated without server-side code
+## Project Purpose
 
-Designed to enhance user engagement
+This project was developed as a portfolio application to demonstrate:
 
-📰 News API
+- Flutter best practices
+- State management with Provider
+- API integration using Dio
+- Dependency injection with get_it
+- Firebase services integration
+- Clean and maintainable architecture
 
-News data is fetched from:
+---
 
-🔗 https://newsdata.io/
+## License
 
-The API is used to:
+This project is intended for educational and portfolio purposes.
 
-Fetch latest news articles
+---
 
-Display headlines with images, titles, and descriptions
+## Author
 
-Keep content fresh and updated
-
-🖼️ User Avatar Decision
-
-For this project, default local avatars are used instead of user-uploaded profile images.
-
-Why?
-
-This app is a portfolio showcase
-
-Avoids unnecessary backend complexity and billing requirements
-
-The architecture is designed so avatar uploads can be added later using Firebase Storage or any external CDN without changing the Firestore schema
-
-This decision was made intentionally to keep the project simple, efficient, and cost-free while still demonstrating strong architectural skills.
-
-🏗️ Project Structure
-
-The project follows a feature-based structure, keeping related logic together:
-
-lib/
- ├── features/
- │   ├── auth/
- │   ├── home/
- │   ├── news/
- │   └── profile/
- ├── shared/
- ├── routes/
- └── main.dart
-
-
-This structure improves scalability and maintainability as the app grows.
-
-🎯 Purpose of the Project
-
-This application was built to:
-
-Demonstrate real-world Flutter development skills
-
-Show clean state management using Provider
-
-Integrate Firebase services effectively
-
-Build a production-like app with thoughtful technical decisions
-
-📌 Future Improvements
-
-Article search & filtering
-
-News categories
-
-Multi-language support
-
-Remote avatar uploads
-
-Offline caching
-
-👩‍💻 Author
-
-Fatima Hure
-Flutter Developer
+Fatima Hure  
+Flutter Developer 
