@@ -84,7 +84,7 @@ The API returns real-time news data in JSON format, which is consumed and displa
 
 ## Screenshots
 
-![App screens](https://drive.google.com/file/d/1FGulirdledA-iwLLQ6SoUEzKKMEbsw-w/view?usp=drive_link)
+<img width="1414" height="2000" alt="Breaking News Screenshots" src="https://github.com/user-attachments/assets/72e5c91f-9487-4fb0-8a3f-dd825c86e6d0" />
 
 ---
 
