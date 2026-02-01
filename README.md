@@ -20,6 +20,12 @@ This project was built to showcase real-world Flutter development skills includi
 - [Screenshots](#screenshots)
 - [Live App Demo](#live-app-demo)
 - [Project Purpose](#project-purpose)
+- [Project Configuration](#project-configuration)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [API Configuration](#api-configuration)
+  - [Firebase Configuration](#firebase-configuration)
+  - [Note](#note)
 - [License](#license)
 - [Author](#author)
 
@@ -108,6 +114,59 @@ This project was developed as a portfolio application to demonstrate:
 - Dependency injection with get_it
 - Firebase services integration
 - Clean and maintainable architecture
+
+---
+
+## Project Configuration
+
+### Prerequisites
+
+- Flutter SDK (stable channel)
+- Dart SDK
+- Android Studio or VS Code
+- Internet connection
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/breaking-news-app.git
+
+2. Navigate to the project folder:
+   ```bash
+   cd breaking-news-app
+   
+3. Install the required dependencies:
+   ```bash
+   flutter pub get
+4. Run the application:
+   ```bash
+   flutter run
+
+### API Configuration
+
+This app uses the NewsData API to fetch news articles.
+
+- Create an account at https://newsdata.io/
+- Generate an API key
+- Add the API key to the project where the Dio client is configured
+
+### Firebase Configuration
+
+The project uses Firebase for:
+- Authentication
+- Cloud Firestore
+- Push Notifications (Firebase Cloud Messaging)
+  
+To enable Firebase locally:
+- Create a Firebase project
+- Register your Android and/or iOS app
+- Add the required Firebase configuration files to the project
+
+### Note
+
+- A default user avatar is used to avoid external storage dependencies.
+- Push notifications require a physical device to work correctly.
 
 ---
 
