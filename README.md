@@ -98,9 +98,11 @@ The API returns real-time news data in JSON format, which is consumed and displa
 
 You can try the app directly in your browser using Appetize:
 
-https://appetize.io/embed/b_7eskk4fncogded3o4hdujl46ba
+https://appetize.io/app/b_tggt5xhr4n5zm4bd5r7hekv6ce
 
 This allows reviewers to interact with the app without installing it locally.
+**If the app doesn't work, go to the device option in Appetize website, try Pixel 6, Pixel 6 Pro, Pixel 8, or Pixel 8 Pro.**
+<img width="808" height="368" alt="Device type" src="https://github.com/user-attachments/assets/3c8462e7-8ca9-47ca-9b17-68d64bb9a4b1" />
 
 ---
 
