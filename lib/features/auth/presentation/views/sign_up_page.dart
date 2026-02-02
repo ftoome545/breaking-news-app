@@ -4,7 +4,7 @@ import 'package:my_app/features/auth/presentation/provider/auth_state_manager.da
 import 'package:my_app/features/auth/presentation/views/login_page.dart';
 import 'package:provider/provider.dart';
 
-import '../../../home/presentation/widgets/bottom_navigation_bar.dart';
+import '../../../../routes_names.dart';
 import '../../../../shared/build_message_bar.dart';
 import '../../../../shared/custom_button.dart';
 import '../../../../shared/custom_password_field.dart';
@@ -144,8 +144,11 @@ class _SignUpPageState extends State<SignUpPage> {
                               buildMessageBar(context,
                                   const Text("You sign up Successfully"));
 
-                              Navigator.pushReplacementNamed(
-                                  context, BottomNavBar.screenRoute);
+                              Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                bottomNavigationBar,
+                                (route) => false,
+                              );
                             }
                           } else {
                             autovalidateMode = AutovalidateMode.always;

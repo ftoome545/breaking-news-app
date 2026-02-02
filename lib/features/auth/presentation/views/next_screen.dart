@@ -54,7 +54,7 @@ class NextScreen extends StatelessWidget {
                       height: 55,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, logInPage);
+                          Navigator.pushReplacementNamed(context, logInPage);
                         },
                         child: const Text(
                           'LOGIN',
@@ -77,7 +77,8 @@ class NextScreen extends StatelessWidget {
                         height: 55,
                         child: ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, signUpPage);
+                              Navigator.pushReplacementNamed(
+                                  context, signUpPage);
                             },
                             child: const Text(
                               'SIGNUP',

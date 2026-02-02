@@ -56,7 +56,8 @@ class _NewsCardState extends State<NewsCard> {
                   child: AspectRatio(
                     aspectRatio: 16 / 9,
                     child: widget.newsModel.imageUrl.isEmpty
-                        ? Image.asset("images/news image.jpg")
+                        ? Image.asset("images/news image.jpg",
+                            fit: BoxFit.cover)
                         : Image.network(widget.newsModel.imageUrl,
                             fit: BoxFit.cover,
                             errorBuilder: (context, error, stackTrace) {

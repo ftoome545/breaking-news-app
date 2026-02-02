@@ -1,10 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_app/constants.dart';
 import 'package:my_app/features/auth/presentation/provider/auth_state_manager.dart';
-import 'package:my_app/features/home/presentation/views/saved_news_page.dart';
+import 'package:my_app/features/home/presentation/widgets/profile_saved_news_section.dart';
 import 'package:my_app/features/home/presentation/widgets/settings_page_body.dart';
 import 'package:provider/provider.dart';
 
@@ -159,7 +158,8 @@ class _ProfilePageBodyState extends State<ProfilePageBody> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.of(context).pushNamed(SavedNewsPage.screenRoute);
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ProfileSavedNewsSection()));
                 },
               ),
             ),

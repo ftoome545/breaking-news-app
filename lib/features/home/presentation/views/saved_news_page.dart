@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/constants.dart';
-import 'package:my_app/features/home/presentation/provider/news_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../theme/theme.dart';
 import '../../../../theme/theme_provider.dart';
 import '../widgets/custom_drawer.dart';
-import '../widgets/news_container.dart';
+import '../widgets/saved_news_body.dart';
 
 class SavedNewsPage extends StatelessWidget {
   const SavedNewsPage({super.key});
@@ -36,31 +34,7 @@ class SavedNewsPage extends StatelessWidget {
         ],
       ),
       drawer: const CustomDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: kHorizontal, vertical: kVertical),
-        child: Consumer<NewsProvider>(
-          builder: (context, newsProvider, state) {
-            return newsProvider.savedNewsList.isEmpty
-                ? const Center(
-                    child: Text('No saved news yet',
-                        style: TextStyle(fontSize: 24)))
-                : ListView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: newsProvider.savedNewsList.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 12),
-                        child: NewsCard(
-                          newsModel: newsProvider.savedNewsList[index],
-                        ),
-                      );
-                    },
-                  );
-          },
-        ),
-      ),
+      body: const SavedNewsBody(),
     );
   }
 }

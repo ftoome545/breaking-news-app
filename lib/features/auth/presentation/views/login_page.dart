@@ -8,7 +8,7 @@ import 'package:my_app/shared/custom_password_field.dart';
 import 'package:my_app/shared/custom_text_form_field.dart';
 import 'package:provider/provider.dart';
 
-import '../../../home/presentation/widgets/bottom_navigation_bar.dart';
+import '../../../../routes_names.dart';
 import '../../../../theme/theme.dart';
 import '../../../../theme/theme_provider.dart';
 
@@ -119,8 +119,11 @@ class _LogInPageState extends State<LogInPage> {
                               if (!context.mounted) return;
                               buildMessageBar(context,
                                   const Text("You logged in Successfully"));
-                              Navigator.pushReplacementNamed(
-                                  context, BottomNavBar.screenRoute);
+                              Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                bottomNavigationBar,
+                                (route) => false,
+                              );
                             }
                           } else {
                             autovalidateMode = AutovalidateMode.always;

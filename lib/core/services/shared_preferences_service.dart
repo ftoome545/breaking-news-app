@@ -27,7 +27,7 @@ class SharedPreferencesService {
   }
 
   static bool getBool(String key) {
-    return _instance.getBool(key) ?? false;
+    return _instance.getBool(key) ?? true;
   }
 
   static Future<void> setNewsList(String key, List<NewsModel> newsList) async {
